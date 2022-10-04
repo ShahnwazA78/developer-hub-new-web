@@ -1,5 +1,7 @@
 .uniInput{
     margin: 20px;
+    
+
 }
 
 .formMainDiv{
@@ -65,6 +67,7 @@
             display: flex;
             margin-top: 20px;
             justify-content: space-around;
+            flex-wrap: wrap;
           
     }
 
@@ -91,3 +94,98 @@
           margin-left: 10px;
 
     }
+
+    .registerAs{
+        width: 550px ;
+    }
+
+    .btnDiv1{
+            display: flex;
+            margin-top: 20px;
+            justify-content: center;
+    }
+
+    .uniInputT{
+        width: 222.4px;
+        margin: 10px;
+    }
+
+@media screen and (max-width : 1025px) {
+
+    .formMainDiv{
+
+        width: 1025px;
+        margin: 20px;
+      
+        margin-top: 100px;
+    
+    
+}
+
+.rightImg {
+    width: 322px;
+    height: 275px;
+    margin-top: 70px;
+    margin-right: 40px;
+}
+    
+}
+
+@media screen and (max-width : 769px) {
+
+    .rightImg {
+       display: none;
+    }
+
+    .formMainDiv{
+
+        width: 725px;
+        margin: 20px;
+      
+        margin-top: 100px;
+    
+    
+}
+    
+}
+@media screen and (max-width : 426px) {
+
+   
+
+    .formMainDiv{
+
+        width: 390px;
+        margin: 20px;
+      
+        margin-top: 100px;
+        padding: 10px;
+    
+    
+}
+
+.registerAs{
+    width: 250px ;
+}
+
+.btnDiv1{
+    margin-right: 45px;
+}
+
+
+.uniDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+.uniInputT{
+    width: 350.4px;
+    margin: 20px;
+    /* margin-left: 100px; */
+}
+
+.uniDiv2Main{
+    display: flex;
+    flex-direction: column;
+}
+    
+}

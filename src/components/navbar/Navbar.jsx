@@ -16,16 +16,17 @@ function Navbar() {
         <input type="radio" name="slider" id="menu-btn" />
         <input type="radio" name="slider" id="close-btn" />
         <ul className="nav-links">
-          {/* <label htmlFor="close-btn" className="tn close-btn">
+          <label htmlFor="close-btn" className="tn close-btn">
             <i className="fas fa-times" />
-          </label> */}
+          </label>
           <li>
             <Link to="/courses" className="desktop-item">
               Courses
             </Link>
             <input type="checkbox" id="showDrop" />
+
             <label htmlFor="showDrop" className="mobile-item">
-              Dropdown Menu
+              <Link to="/courses"> Courses </Link>
             </label>
             <ul className="drop-menu">
               <li>
@@ -48,7 +49,7 @@ function Navbar() {
             </a>
             <input type="checkbox" id="showDrop" />
             <label htmlFor="showDrop" className="mobile-item">
-              Dropdown Menu
+              <Link to="/"> Segment </Link>
             </label>
             <ul className="drop-menu">
               <li>
@@ -71,7 +72,7 @@ function Navbar() {
             </a>
             <input type="checkbox" id="showDrop" />
             <label htmlFor="showDrop" className="mobile-item">
-              Dropdown Menu
+              <Link to="/"> Partners </Link>
             </label>
             <ul className="drop-menu">
               <li>
@@ -100,7 +101,7 @@ function Navbar() {
             </a>
             <input type="checkbox" id="showMega" />
             <div htmlFor="showMega" className="mobile-item">
-              Mega Menu
+              <Link to="/"> Mega Menu </Link>
             </div>
             <div className="mega-box">
               <div className="content">

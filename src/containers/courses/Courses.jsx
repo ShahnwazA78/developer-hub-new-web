@@ -6,7 +6,9 @@ const Courses = () => {
       <div className="sub_body">
         <div className="sub_body_left">
           <div className="left_content">
-            <div className="left_content_img1"></div>
+            <div className="left_content_img">
+              <img src="blockchain.png" alt="Blockchain" />
+            </div>
           </div>
         </div>
         <div className="sub_body_right">
@@ -49,7 +51,9 @@ const Courses = () => {
       <div id="reverse" className="sub_body">
         <div className="sub_body_left">
           <div className="left_content">
-            <div className="left_content_img2"></div>
+            <div className="left_content_img">
+              <img src="Aiml.png" alt="AI & ML" />
+            </div>
           </div>
         </div>
         <div className="sub_body_right">
@@ -91,75 +95,12 @@ const Courses = () => {
           </div>
         </div>
       </div>
-      <div className="sub_body">
-        <div className="sub_body_left">
-          <div className="left_content">
-            <div className="left_content_img3"></div>
-          </div>
-        </div>
-        <div className="sub_body_right">
-          <div className="right_content">
-            <div id="right_content" className="upper_content">
-              <p id="heading" className="gradient__text">
-                Metaverse
-              </p>
-              <p>
-                To help you get a sense of how vague and complex a term “the
-                metaverse” can be, here's an exercise: Mentally replace the
-                phrase “the metaverse” in a sentence with “cyberspace.” Ninety
-                percent of the time, the meaning won't substantially change.
-                That's because the term doesn't really refer to any one specific
-                type of technology, but rather a broad (and often speculative)
-                shift in how we interact with technology. And it's entirely
-                possible that the term itself will eventually become just as
-                antiquated, even as the specific technology it once described
-                becomes commonplace. Many companies that have hopped on board
-                the metaverse bandwagon also envision some sort of new digital
-                economy, where users can create, buy, and sell goods. In the
-                more idealistic visions of the metaverse, it's interoperable,
-                allowing you to take virtual items like clothes or cars from one
-                platform to another, though this is harder than it sounds. While
-                some advocates claim new technologies like NFTs can enable
-                portable digital assets, this simply isn't true, and bringing
-                items from one video game or virtual world to another is an
-                enormously complex task that no one company can solve.
-              </p>
-            </div>
-            <div id="right_content" className="lower_content">
-              <h1> Future Scope of Metaverse :</h1>
-              <p>
-                The metaverse is the next frontier in human connectivity. Even
-                before the Covid-19 pandemic, digital communities were on a path
-                to supplant physical ones. While the real world has been at a
-                standstill, the virtual one has continued to thrive — even grow.
-                In fact, it’s actually booming. One of the changes that our
-                civilization is set to undergo is the development of the
-                Metaverse. With over 2.5 billion people out on virtual platforms
-                like Zoom, Teams, and Google Meet, 2020 saw an unexpected spike
-                in VR technology, applications, and gadgets.
-              </p>
-              <h1> Metaverse use cases in various Industries</h1>
-              <p>
-                <ul>
-                  <li>
-                    Gaming. Gaming industry is said to be one of the core and
-                    primary investors of Metaverse technology
-                  </li>
-                  <li>Travel and Tourism.</li>
-                  <li>Education and Learning.</li>
-                  <li>Remote working</li>
-                  <li>Real estate</li>
-                  <li>Social media and entertainment.</li>
-                </ul>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
       <div id="reverse" className="sub_body">
         <div className="sub_body_left">
           <div className="left_content">
-            <div id="image3" className="left_content_img2"></div>
+            <div id="image3" className="left_content_img">
+              <img src="arvr.png" alt="" />
+            </div>
           </div>
         </div>
         <div className="sub_body_right">

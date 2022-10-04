@@ -1,38 +1,38 @@
-import React from "react";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import dayjs from "dayjs";
-import { useTheme } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import Radio from "@mui/material/Radio";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import RadioGroup from "@mui/material/RadioGroup";
-import ReCAPTCHA from "react-google-recaptcha";
+import React from 'react';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import dayjs from 'dayjs';
+import { useTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import Radio from '@mui/material/Radio';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import RadioGroup from '@mui/material/RadioGroup';
+import ReCAPTCHA from 'react-google-recaptcha';
 
-import Checkbox from "@mui/material/Checkbox";
+import Checkbox from '@mui/material/Checkbox';
 
 // import InputLabel from '@mui/material/InputLabel';
 // import MenuItem from '@mui/material/MenuItem';
-import FormHelperText from "@mui/material/FormHelperText";
+import FormHelperText from '@mui/material/FormHelperText';
 // import FormControl from '@mui/material/FormControl';
 // import Select from '@mui/material/Select';
-import Chip from "@mui/material/Chip";
+import Chip from '@mui/material/Chip';
 // import RadioGroup from '@mui/material/RadioGroup';
 // import FormControlLabel from '@mui/material/FormControlLabel';
 // import Radio from '@mui/material/Radio';
 // import FormLabel from '@mui/material/FormLabel';
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogTitle from "@mui/material/DialogTitle";
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
 // import Button from '@mui/material/Button';
-import "./Part.css";
-import "./FormCss.css";
+import './Part.css';
+import './FormCss.css';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -45,8 +45,8 @@ const MenuProps = {
   },
 };
 
-const Courses = ["Blockchain", "Metaverse", "AI/ML", "AR/VR"];
-const trainingMode = ["Text", "Audio", "Video", "All"];
+const Courses = ['Blockchain', 'Metaverse', 'AI/ML', 'AR/VR'];
+const trainingMode = ['Text', 'Audio', 'Video', 'All'];
 
 function getStyles1(name, personName, theme) {
   return {
@@ -65,20 +65,20 @@ function getStyles2(name, personName, theme) {
   };
 }
 
-const label = { inputProps: { "aria-label": "Checkbox demo" } };
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 export default function FormBasic() {
   function onChange(value) {
-    console.log("Captcha value:", value);
+    console.log('Captcha value:', value);
   }
-  const [type, setType] = React.useState("");
+  const [type, setType] = React.useState('');
   const [isVisible, setIsVisible] = React.useState(1);
   const [name, setName] = React.useState();
 
-  const [value1, setvalue1] = React.useState("");
-  const [value2, setvalue2] = React.useState("");
-  const [value3, setvalue3] = React.useState("");
-  const [value4, setvalue4] = React.useState("");
+  const [value1, setvalue1] = React.useState('');
+  const [value2, setvalue2] = React.useState('');
+  const [value3, setvalue3] = React.useState('');
+  const [value4, setvalue4] = React.useState('');
   const [open1, setOpen1] = React.useState(false);
   const [open2, setOpen2] = React.useState(false);
   const [open3, setOpen3] = React.useState(false);
@@ -98,7 +98,7 @@ export default function FormBasic() {
     setIsVisible(isVisible - 1);
   };
 
-  const [uniQuali, setUniQuali] = React.useState("");
+  const [uniQuali, setUniQuali] = React.useState('');
 
   const handleuniQuali = (event) => {
     setUniQuali(event.target.value);
@@ -110,7 +110,7 @@ export default function FormBasic() {
     } = event;
     setPersonName1(
       // On autofill we get a stringified value.
-      typeof value === "string" ? value.split(",") : value
+      typeof value === 'string' ? value.split(',') : value
     );
   };
   const handleChange2 = (event) => {
@@ -119,7 +119,7 @@ export default function FormBasic() {
     } = event;
     setPersonName2(
       // On autofill we get a stringified value.
-      typeof value === "string" ? value.split(",") : value
+      typeof value === 'string' ? value.split(',') : value
     );
   };
 
@@ -143,7 +143,7 @@ export default function FormBasic() {
   };
 
   const handleClose = (event, reason) => {
-    if (reason !== "backdropClick") {
+    if (reason !== 'backdropClick') {
       setOpen5(false);
     }
   };
@@ -183,7 +183,7 @@ export default function FormBasic() {
       {isVisible === 1 ? (
         <div className="phase1MainDiv">
           <h1 className="registerHead">Register</h1>
-          <FormControl style={{ width: "550px" }}>
+          <FormControl className="registerAs">
             <InputLabel id="demo-simple-select-label">
               Registering As
             </InputLabel>
@@ -201,63 +201,69 @@ export default function FormBasic() {
               <MenuItem value="Trainer">Trainer</MenuItem>
             </Select>
           </FormControl>
-          <div style={{ marginTop: "20px" }}>
+          <div style={{ marginTop: '20px' }}>
             <TextField
               id="outlined-basic"
               label="Name"
               variant="outlined"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              style={{ marginRight: "50px", width: "250px" }}
+              style={{
+                marginRight: '50px',
+                width: '250px',
+                marginBottom: '20px',
+              }}
             />
             <TextField
               id="outlined-basic"
               label="Email"
               variant="outlined"
-              style={{ width: "250px" }}
+              style={{ width: '250px' }}
             />
           </div>
-          <div style={{ marginTop: "20px" }}>
+          <div style={{ marginTop: '20px' }}>
             <TextField
               id="outlined-basic"
               label="Phone"
               variant="outlined"
               // value={name}
               // onChange={(e) => setName(e.target.value)}
-              style={{ marginRight: "50px", width: "250px" }}
+              style={{
+                marginRight: '50px',
+                width: '250px',
+                marginBottom: '20px',
+              }}
             />
             <TextField
               id="outlined-basic"
               label="City"
               variant="outlined"
-              style={{ width: "250px" }}
+              style={{ width: '250px' }}
             />
           </div>
-          <div style={{ marginTop: "20px" }}>
+          <div style={{ marginTop: '20px' }}>
             <TextField
               id="outlined-basic"
               label="State"
               variant="outlined"
               // value={name}
               // onChange={(e) => setName(e.target.value)}
-              style={{ marginRight: "50px", width: "250px" }}
+              style={{
+                marginRight: '50px',
+                width: '250px',
+                marginBottom: '20px',
+              }}
             />
             <TextField
               id="outlined-basic"
               label="Country"
               variant="outlined"
-              style={{ width: "250px" }}
+              style={{ width: '250px' }}
             />
           </div>
-          <div
-            style={{
-              display: "flex",
-              marginTop: "20px",
-              justifyContent: "center",
-            }}
-          >
+          <div className="btnDiv1">
             <Button
-              style={{ width: "200px" }}
+              style={{ width: '200px', marginBottom: '20px' }}
               variant="contained"
               onClick={() => handleNext()}
             >
@@ -266,7 +272,7 @@ export default function FormBasic() {
           </div>
         </div>
       ) : isVisible === 2 ? (
-        type === "IT Software" || type === "Fresher" ? (
+        type === 'IT Software' || type === 'Fresher' ? (
           <div>
             <h1 className="ItHead">{type}</h1>
             <div className="container">
@@ -317,8 +323,8 @@ export default function FormBasic() {
                           renderValue={(selected) => (
                             <Box
                               sx={{
-                                display: "flex",
-                                flexWrap: "wrap",
+                                display: 'flex',
+                                flexWrap: 'wrap',
                                 gap: 0.5,
                               }}
                             >
@@ -465,7 +471,7 @@ export default function FormBasic() {
                         <DialogContent>
                           <Box
                             component="form"
-                            sx={{ display: "flex", flexWrap: "wrap" }}
+                            sx={{ display: 'flex', flexWrap: 'wrap' }}
                           >
                             <FormControl sx={{ m: 1, minWidth: 120 }}>
                               <TextField
@@ -498,14 +504,14 @@ export default function FormBasic() {
               </div>
               <div className="btnDiv">
                 <Button
-                  style={{ width: "200px" }}
+                  style={{ width: '200px', marginBottom: '20px' }}
                   variant="contained"
                   onClick={() => handleBack()}
                 >
                   Back
                 </Button>
                 <Button
-                  style={{ width: "200px" }}
+                  style={{ width: '200px', marginBottom: '20px' }}
                   variant="contained"
                   onClick={() => handleNext()}
                 >
@@ -514,28 +520,28 @@ export default function FormBasic() {
               </div>
             </div>
           </div>
-        ) : type === "University" ? (
+        ) : type === 'University' ? (
           <div className="uniDiv">
             <h1 className="uniHead">{type}</h1>
             <TextField
               id="outlined-basic"
               label="Name"
               variant="outlined"
-              style={{ margin: "10px" }}
+              style={{ margin: '10px' }}
               className="uniInput"
             />
             <TextField
               id="outlined-basic"
               label="Phone"
               variant="outlined"
-              style={{ margin: "10px" }}
+              style={{ margin: '10px' }}
               className="uniInput"
             />
             <TextField
               id="outlined-basic"
               label="Email"
               variant="outlined"
-              style={{ margin: "10px" }}
+              style={{ margin: '10px' }}
               className="uniInput"
             />
             <h3 className="reportHead">Reporting Manager</h3>
@@ -543,41 +549,38 @@ export default function FormBasic() {
               id="outlined-basic"
               label="Name"
               variant="outlined"
-              style={{ margin: "10px" }}
+              style={{ margin: '10px' }}
               className="uniInput"
             />
             <TextField
               id="outlined-basic"
               label="Email"
               variant="outlined"
-              style={{ margin: "10px" }}
+              style={{ margin: '10px' }}
               className="uniInput"
             />
             <TextField
               id="outlined-basic"
               label="Designation"
               variant="outlined"
-              style={{ margin: "10px" }}
+              style={{ margin: '10px' }}
               className="uniInput"
             />
             <TextField
               id="outlined-basic"
               label="Phone"
               variant="outlined"
-              style={{ margin: "10px" }}
+              style={{ margin: '10px' }}
               className="uniInput"
             />
             <TextField
               id="outlined-basic"
               label="Department"
-              style={{ margin: "10px" }}
+              style={{ margin: '10px' }}
               variant="outlined"
               className="uniInput"
             />
-            <FormControl
-              className="uniInput"
-              style={{ width: "222.4px", margin: "10px" }}
-            >
+            <FormControl className="uniInputT">
               <InputLabel id="demo-simple-select-label">
                 Trainee Qualification
               </InputLabel>
@@ -594,14 +597,14 @@ export default function FormBasic() {
             </FormControl>
             <div className="btnDiv">
               <Button
-                style={{ width: "200px" }}
+                style={{ width: '200px', marginBottom: '20px' }}
                 variant="contained"
                 onClick={() => handleBack()}
               >
                 Back
               </Button>
               <Button
-                style={{ width: "200px" }}
+                style={{ width: '200px', marginBottom: '20px' }}
                 variant="contained"
                 onClick={() => handleNext()}
               >
@@ -609,7 +612,7 @@ export default function FormBasic() {
               </Button>
             </div>
           </div>
-        ) : type === "Trainer" ? (
+        ) : type === 'Trainer' ? (
           <div>
             <h2>{type}</h2>
 
@@ -650,7 +653,7 @@ export default function FormBasic() {
                       >
                         <TextField
                           required
-                          style={{ width: "300px" }}
+                          style={{ width: '300px' }}
                           id="Name"
                           label="Company Name"
                           name="Name"
@@ -664,7 +667,7 @@ export default function FormBasic() {
                       >
                         <TextField
                           required
-                          style={{ width: "300px" }}
+                          style={{ width: '300px' }}
                           id="email"
                           label="Company Email"
                           name="email"
@@ -678,7 +681,7 @@ export default function FormBasic() {
                       >
                         <TextField
                           required
-                          style={{ width: "300px" }}
+                          style={{ width: '300px' }}
                           id="Phone"
                           label="Phone"
                           name="Phone"
@@ -692,7 +695,7 @@ export default function FormBasic() {
                       >
                         <TextField
                           required
-                          style={{ width: "300px" }}
+                          style={{ width: '300px' }}
                           id="Country"
                           label="Country"
                           name="Country"
@@ -706,7 +709,7 @@ export default function FormBasic() {
                       >
                         <TextField
                           required
-                          style={{ width: "300px" }}
+                          style={{ width: '300px' }}
                           id="City"
                           label="City"
                           name="City"
@@ -717,9 +720,9 @@ export default function FormBasic() {
                   </div>
 
                   <div className="gender-title">
-                    {" "}
-                    <p style={{ fontWeight: "500", fontSize: "20px" }}>
-                      {" "}
+                    {' '}
+                    <p style={{ fontWeight: '500', fontSize: '20px' }}>
+                      {' '}
                       Report Manager
                     </p>
                   </div>
@@ -730,7 +733,7 @@ export default function FormBasic() {
                       >
                         <TextField
                           required
-                          style={{ width: "300px" }}
+                          style={{ width: '300px' }}
                           id="PAN"
                           label="PAN"
                           name="PAN"
@@ -744,7 +747,7 @@ export default function FormBasic() {
                       >
                         <TextField
                           required
-                          style={{ width: "300px" }}
+                          style={{ width: '300px' }}
                           id="GST"
                           label="GST"
                           name="GST"
@@ -797,8 +800,8 @@ export default function FormBasic() {
                           renderValue={(selected) => (
                             <Box
                               sx={{
-                                display: "flex",
-                                flexWrap: "wrap",
+                                display: 'flex',
+                                flexWrap: 'wrap',
                                 gap: 0.5,
                               }}
                             >
@@ -946,7 +949,7 @@ export default function FormBasic() {
                         <DialogContent>
                           <Box
                             component="form"
-                            sx={{ display: "flex", flexWrap: "wrap" }}
+                            sx={{ display: 'flex', flexWrap: 'wrap' }}
                           >
                             <FormControl sx={{ m: 1, minWidth: 120 }}>
                               <TextField
@@ -973,14 +976,14 @@ export default function FormBasic() {
                   </div>
                   <div className="btnDiv">
                     <Button
-                      style={{ width: "100px" }}
+                      style={{ width: '100px' }}
                       variant="contained"
                       onClick={() => handleBack()}
                     >
                       Back
                     </Button>
                     <Button
-                      style={{ width: "100px" }}
+                      style={{ width: '100px', marginBottom: '20px' }}
                       variant="contained"
                       onClick={() => handleNext()}
                     >
@@ -997,25 +1000,26 @@ export default function FormBasic() {
           </>
         )
       ) : isVisible === 3 ? (
-        type === "University" ? (
-          <div>
+        type === 'University' ? (
+          <div className="uniDiv2Main">
             <h1 className="uniHead2">{type}</h1>
             <TextField
               id="outlined-basic"
               label="Total no. of Trainee"
               variant="outlined"
               className="uni2Input"
+              style={{ marginBottom: '20px' }}
             />
             <TextField
               id="outlined-basic"
               label="Training Time"
               variant="outlined"
               className="uni2Input"
-            />{" "}
+            />{' '}
             <br />
-            <label style={{ marginLeft: "40px" }}>Start Date</label>
+            <label style={{ marginLeft: '40px' }}>Start Date</label>
             <input type="date" name="Start Date" className="inputDate" />
-            <label style={{ marginLeft: "80px" }}>End Date</label>
+            <label style={{ marginLeft: '80px' }}>End Date</label>
             <input type="date" name="End Date" className="inputDate" />
             <div className="container">
               {/* <div className="title">Registration</div> */}
@@ -1065,8 +1069,8 @@ export default function FormBasic() {
                           renderValue={(selected) => (
                             <Box
                               sx={{
-                                display: "flex",
-                                flexWrap: "wrap",
+                                display: 'flex',
+                                flexWrap: 'wrap',
                                 gap: 0.5,
                               }}
                             >
@@ -1210,7 +1214,7 @@ export default function FormBasic() {
                         <DialogContent>
                           <Box
                             component="form"
-                            sx={{ display: "flex", flexWrap: "wrap" }}
+                            sx={{ display: 'flex', flexWrap: 'wrap' }}
                           >
                             <FormControl sx={{ m: 1, minWidth: 120 }}>
                               <TextField
@@ -1243,14 +1247,14 @@ export default function FormBasic() {
               </div>
               <div className="btnDiv">
                 <Button
-                  style={{ width: "200px" }}
+                  style={{ width: '200px', marginBottom: '20px' }}
                   variant="contained"
                   onClick={() => handleBack()}
                 >
                   Back
                 </Button>
                 <Button
-                  style={{ width: "200px" }}
+                  style={{ width: '200px', marginBottom: '20px' }}
                   variant="contained"
                   onClick={() => handleNext()}
                 >
@@ -1259,7 +1263,7 @@ export default function FormBasic() {
               </div>
             </div>
           </div>
-        ) : type === "Channel Partner" ? (
+        ) : type === 'Channel Partner' ? (
           <>
             <div>
               <h2>{type}</h2>
@@ -1268,27 +1272,27 @@ export default function FormBasic() {
                 Send Otp
               </Button>
               <ReCAPTCHA
-                style={{ marginTop: "40px" }}
+                style={{ marginTop: '40px' }}
                 sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                 onChange={onChange}
               />
-              <div style={{ display: "flex", marginTop: "30px" }}>
-                <Checkbox {...label} /> <p style={{ marginTop: "9px" }}>T&C</p>
-                <Checkbox {...label} />{" "}
-                <p style={{ marginTop: "9px" }}>Data Privacy</p>
-                <Checkbox {...label} />{" "}
-                <p style={{ marginTop: "9px" }}>Cross Promotions</p>
+              <div style={{ display: 'flex', marginTop: '30px' }}>
+                <Checkbox {...label} /> <p style={{ marginTop: '9px' }}>T&C</p>
+                <Checkbox {...label} />{' '}
+                <p style={{ marginTop: '9px' }}>Data Privacy</p>
+                <Checkbox {...label} />{' '}
+                <p style={{ marginTop: '9px' }}>Cross Promotions</p>
               </div>
               <div className="btnDiv">
                 <Button
-                  style={{ width: "100px" }}
+                  style={{ width: '100px' }}
                   variant="contained"
                   onClick={() => handleBack()}
                 >
                   Back
                 </Button>
                 <Button
-                  style={{ width: "100px" }}
+                  style={{ width: '100px' }}
                   variant="contained"
                   onClick={() => handleNext()}
                 >
@@ -1297,7 +1301,7 @@ export default function FormBasic() {
               </div>
             </div>
           </>
-        ) : type === "Fresher" || type === "IT Software" ? (
+        ) : type === 'Fresher' || type === 'IT Software' ? (
           <>
             <div>
               <h2>{type}</h2>
@@ -1306,27 +1310,27 @@ export default function FormBasic() {
                 Send Otp
               </Button>
               <ReCAPTCHA
-                style={{ marginTop: "40px" }}
+                style={{ marginTop: '40px' }}
                 sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                 onChange={onChange}
               />
-              <div style={{ display: "flex", marginTop: "30px" }}>
-                <Checkbox {...label} /> <p style={{ marginTop: "9px" }}>T&C</p>
-                <Checkbox {...label} />{" "}
-                <p style={{ marginTop: "9px" }}>Data Privacy</p>
-                <Checkbox {...label} />{" "}
-                <p style={{ marginTop: "9px" }}>Cross Promotions</p>
+              <div style={{ display: 'flex', marginTop: '30px' }}>
+                <Checkbox {...label} /> <p style={{ marginTop: '9px' }}>T&C</p>
+                <Checkbox {...label} />{' '}
+                <p style={{ marginTop: '9px' }}>Data Privacy</p>
+                <Checkbox {...label} />{' '}
+                <p style={{ marginTop: '9px' }}>Cross Promotions</p>
               </div>
               <div className="btnDiv">
                 <Button
-                  style={{ width: "100px" }}
+                  style={{ width: '100px' }}
                   variant="contained"
                   onClick={() => handleBack()}
                 >
                   Back
                 </Button>
                 <Button
-                  style={{ width: "100px" }}
+                  style={{ width: '100px' }}
                   variant="contained"
                   onClick={() => handleNext()}
                 >
@@ -1336,7 +1340,7 @@ export default function FormBasic() {
             </div>
           </>
         ) : (
-          ""
+          ''
         )
       ) : isVisible === 4 ? (
         <div>
@@ -1346,27 +1350,27 @@ export default function FormBasic() {
             Send Otp
           </Button>
           <ReCAPTCHA
-            style={{ marginTop: "40px" }}
+            style={{ marginTop: '40px' }}
             sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
             onChange={onChange}
           />
-          <div style={{ display: "flex", marginTop: "30px" }}>
-            <Checkbox {...label} /> <p style={{ marginTop: "9px" }}>T&C</p>
-            <Checkbox {...label} />{" "}
-            <p style={{ marginTop: "9px" }}>Data Privacy</p>
-            <Checkbox {...label} />{" "}
-            <p style={{ marginTop: "9px" }}>Cross Promotions</p>
+          <div style={{ display: 'flex', marginTop: '30px' }}>
+            <Checkbox {...label} /> <p style={{ marginTop: '9px' }}>T&C</p>
+            <Checkbox {...label} />{' '}
+            <p style={{ marginTop: '9px' }}>Data Privacy</p>
+            <Checkbox {...label} />{' '}
+            <p style={{ marginTop: '9px' }}>Cross Promotions</p>
           </div>
           <div className="btnDiv">
             <Button
-              style={{ width: "100px" }}
+              style={{ width: '100px' }}
               variant="contained"
               onClick={() => handleBack()}
             >
               Back
             </Button>
             <Button
-              style={{ width: "100px" }}
+              style={{ width: '100px' }}
               variant="contained"
               onClick={() => handleNext()}
             >
@@ -1375,7 +1379,7 @@ export default function FormBasic() {
           </div>
         </div>
       ) : (
-        ""
+        ''
       )}
 
       <img className="rightImg" src="RegisterImg.png" alt="img" />
